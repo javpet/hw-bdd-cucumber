@@ -15,3 +15,9 @@
         #warning.message= flash[:warning]
 
       = yield
+
+      %h1 Search TMDB for a movie
+      = form_tag :action => 'search_tmdb' do
+        %label{:for => 'search_terms'} Search Terms
+        = text_field_tag 'search_terms'
+        = submit_tag 'Search TMDB'
